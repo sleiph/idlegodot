@@ -1,31 +1,109 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scripts/Recursos.gd" type="Script" id=1]
+[ext_resource path="res://scripts/Madeira.gd" type="Script" id=2]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="recursosContainer" type="GridContainer" parent="."]
+[node name="jogoContainer" type="GridContainer" parent="."]
+margin_right = 524.0
+margin_bottom = 124.0
+custom_constants/hseparation = 12
+columns = 2
+script = ExtResource( 1 )
+
+[node name="recursosContainer" type="GridContainer" parent="jogoContainer"]
 margin_right = 256.0
-margin_bottom = 116.0
+margin_bottom = 124.0
+size_flags_horizontal = 3
+custom_constants/vseparation = 5
+
+[node name="Madeira" type="GridContainer" parent="jogoContainer/recursosContainer"]
+margin_right = 256.0
+margin_bottom = 15.0
+size_flags_horizontal = 3
+columns = 3
+script = ExtResource( 2 )
+
+[node name="nomeLabelM" type="RichTextLabel" parent="jogoContainer/recursosContainer/Madeira"]
+margin_right = 83.0
+margin_bottom = 15.0
+size_flags_horizontal = 3
+text = "Erva"
+fit_content_height = true
+
+[node name="qntLabelM" type="RichTextLabel" parent="jogoContainer/recursosContainer/Madeira"]
+margin_left = 87.0
+margin_right = 170.0
+margin_bottom = 15.0
+size_flags_horizontal = 3
+text = "%s"
+fit_content_height = true
+
+[node name="vlctLabelM" type="RichTextLabel" parent="jogoContainer/recursosContainer/Madeira"]
+margin_left = 174.0
+margin_right = 256.0
+margin_bottom = 15.0
+size_flags_horizontal = 3
+text = "%s"
+fit_content_height = true
+
+[node name="Madeira2" type="GridContainer" parent="jogoContainer/recursosContainer"]
+margin_top = 20.0
+margin_right = 256.0
+margin_bottom = 35.0
+size_flags_horizontal = 3
+columns = 3
+
+[node name="nomeLabel" type="RichTextLabel" parent="jogoContainer/recursosContainer/Madeira2"]
+margin_right = 83.0
+margin_bottom = 15.0
+size_flags_horizontal = 3
+text = "Madeira"
+fit_content_height = true
+
+[node name="qntLabel2" type="RichTextLabel" parent="jogoContainer/recursosContainer/Madeira2"]
+margin_left = 87.0
+margin_right = 170.0
+margin_bottom = 15.0
+size_flags_horizontal = 3
+text = "%s"
+fit_content_height = true
+
+[node name="vlctLabel3" type="RichTextLabel" parent="jogoContainer/recursosContainer/Madeira2"]
+margin_left = 174.0
+margin_right = 256.0
+margin_bottom = 15.0
+size_flags_horizontal = 3
+text = "%s"
+fit_content_height = true
+
+[node name="construcoesContainer" type="GridContainer" parent="jogoContainer"]
+margin_left = 268.0
+margin_right = 524.0
+margin_bottom = 124.0
+size_flags_horizontal = 3
 custom_constants/vseparation = 18
 
-[node name="WeedContainer" type="GridContainer" parent="recursosContainer"]
+[node name="WeedFieldContainer" type="GridContainer" parent="jogoContainer/construcoesContainer"]
 margin_right = 256.0
 margin_bottom = 53.0
 size_flags_horizontal = 3
 
-[node name="LabelContainer" type="PanelContainer" parent="recursosContainer/WeedContainer"]
+[node name="LabelContainer" type="PanelContainer" parent="jogoContainer/construcoesContainer/WeedFieldContainer"]
 margin_right = 256.0
 margin_bottom = 29.0
 size_flags_vertical = 3
 
-[node name="RichTextLabel" type="RichTextLabel" parent="recursosContainer/WeedContainer/LabelContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="jogoContainer/construcoesContainer/WeedFieldContainer/LabelContainer"]
 margin_left = 7.0
 margin_top = 7.0
 margin_right = 249.0
 margin_bottom = 22.0
-text = "Weed"
+text = "Weed Field"
 fit_content_height = true
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="recursosContainer/WeedContainer/LabelContainer"]
+[node name="RichTextLabel2" type="RichTextLabel" parent="jogoContainer/construcoesContainer/WeedFieldContainer/LabelContainer"]
 margin_left = 7.0
 margin_top = 7.0
 margin_right = 249.0
@@ -35,7 +113,7 @@ bbcode_text = "[right]%s[/right]"
 text = "%s"
 fit_content_height = true
 
-[node name="ButtonsContainer" type="GridContainer" parent="recursosContainer/WeedContainer"]
+[node name="ButtonsContainer" type="GridContainer" parent="jogoContainer/construcoesContainer/WeedFieldContainer"]
 margin_top = 33.0
 margin_right = 256.0
 margin_bottom = 53.0
@@ -43,39 +121,39 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 columns = 2
 
-[node name="Button" type="Button" parent="recursosContainer/WeedContainer/ButtonsContainer"]
+[node name="Button" type="Button" parent="jogoContainer/construcoesContainer/WeedFieldContainer/ButtonsContainer"]
 margin_right = 126.0
 margin_bottom = 20.0
 size_flags_horizontal = 3
 text = "comprar"
 
-[node name="Button2" type="Button" parent="recursosContainer/WeedContainer/ButtonsContainer"]
+[node name="Button2" type="Button" parent="jogoContainer/construcoesContainer/WeedFieldContainer/ButtonsContainer"]
 margin_left = 130.0
 margin_right = 256.0
 margin_bottom = 20.0
 size_flags_horizontal = 3
 text = "vender"
 
-[node name="MadeiraContainer" type="GridContainer" parent="recursosContainer"]
+[node name="MadeireiraContainer" type="GridContainer" parent="jogoContainer/construcoesContainer"]
 margin_top = 71.0
 margin_right = 256.0
 margin_bottom = 124.0
 size_flags_horizontal = 3
 
-[node name="LabelContainer" type="PanelContainer" parent="recursosContainer/MadeiraContainer"]
+[node name="LabelContainer" type="PanelContainer" parent="jogoContainer/construcoesContainer/MadeireiraContainer"]
 margin_right = 256.0
 margin_bottom = 29.0
 size_flags_vertical = 3
 
-[node name="RichTextLabel" type="RichTextLabel" parent="recursosContainer/MadeiraContainer/LabelContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="jogoContainer/construcoesContainer/MadeireiraContainer/LabelContainer"]
 margin_left = 7.0
 margin_top = 7.0
 margin_right = 249.0
 margin_bottom = 22.0
-text = "Madeira"
+text = "Madeireira"
 fit_content_height = true
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="recursosContainer/MadeiraContainer/LabelContainer"]
+[node name="RichTextLabel2" type="RichTextLabel" parent="jogoContainer/construcoesContainer/MadeireiraContainer/LabelContainer"]
 margin_left = 7.0
 margin_top = 7.0
 margin_right = 249.0
@@ -85,7 +163,7 @@ bbcode_text = "[right]%s[/right]"
 text = "%s"
 fit_content_height = true
 
-[node name="ButtonsContainer" type="GridContainer" parent="recursosContainer/MadeiraContainer"]
+[node name="ButtonsContainer" type="GridContainer" parent="jogoContainer/construcoesContainer/MadeireiraContainer"]
 margin_top = 33.0
 margin_right = 256.0
 margin_bottom = 53.0
@@ -93,14 +171,14 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 columns = 2
 
-[node name="Button" type="Button" parent="recursosContainer/MadeiraContainer/ButtonsContainer"]
+[node name="Button" type="Button" parent="jogoContainer/construcoesContainer/MadeireiraContainer/ButtonsContainer"]
 margin_right = 126.0
 margin_bottom = 20.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "comprar"
 
-[node name="Button2" type="Button" parent="recursosContainer/MadeiraContainer/ButtonsContainer"]
+[node name="Button2" type="Button" parent="jogoContainer/construcoesContainer/MadeireiraContainer/ButtonsContainer"]
 margin_left = 130.0
 margin_right = 256.0
 margin_bottom = 20.0

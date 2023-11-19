@@ -1,0 +1,109 @@
+[gd_scene format=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="recursosContainer" type="GridContainer" parent="."]
+margin_right = 256.0
+margin_bottom = 116.0
+custom_constants/vseparation = 18
+
+[node name="WeedContainer" type="GridContainer" parent="recursosContainer"]
+margin_right = 256.0
+margin_bottom = 53.0
+size_flags_horizontal = 3
+
+[node name="LabelContainer" type="PanelContainer" parent="recursosContainer/WeedContainer"]
+margin_right = 256.0
+margin_bottom = 29.0
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="recursosContainer/WeedContainer/LabelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 249.0
+margin_bottom = 22.0
+text = "Weed"
+fit_content_height = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="recursosContainer/WeedContainer/LabelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 249.0
+margin_bottom = 22.0
+bbcode_enabled = true
+bbcode_text = "[right]%s[/right]"
+text = "%s"
+fit_content_height = true
+
+[node name="ButtonsContainer" type="GridContainer" parent="recursosContainer/WeedContainer"]
+margin_top = 33.0
+margin_right = 256.0
+margin_bottom = 53.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 2
+
+[node name="Button" type="Button" parent="recursosContainer/WeedContainer/ButtonsContainer"]
+margin_right = 126.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+text = "comprar"
+
+[node name="Button2" type="Button" parent="recursosContainer/WeedContainer/ButtonsContainer"]
+margin_left = 130.0
+margin_right = 256.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+text = "vender"
+
+[node name="MadeiraContainer" type="GridContainer" parent="recursosContainer"]
+margin_top = 71.0
+margin_right = 256.0
+margin_bottom = 124.0
+size_flags_horizontal = 3
+
+[node name="LabelContainer" type="PanelContainer" parent="recursosContainer/MadeiraContainer"]
+margin_right = 256.0
+margin_bottom = 29.0
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="recursosContainer/MadeiraContainer/LabelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 249.0
+margin_bottom = 22.0
+text = "Madeira"
+fit_content_height = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="recursosContainer/MadeiraContainer/LabelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 249.0
+margin_bottom = 22.0
+bbcode_enabled = true
+bbcode_text = "[right]%s[/right]"
+text = "%s"
+fit_content_height = true
+
+[node name="ButtonsContainer" type="GridContainer" parent="recursosContainer/MadeiraContainer"]
+margin_top = 33.0
+margin_right = 256.0
+margin_bottom = 53.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 2
+
+[node name="Button" type="Button" parent="recursosContainer/MadeiraContainer/ButtonsContainer"]
+margin_right = 126.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "comprar"
+
+[node name="Button2" type="Button" parent="recursosContainer/MadeiraContainer/ButtonsContainer"]
+margin_left = 130.0
+margin_right = 256.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "vender"

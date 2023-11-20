@@ -1,9 +1,12 @@
 extends GridContainer
 
 # Declare member variables here. Examples:
-var timer = Timer.new()
+onready var erva = get_node("recursosContainer/Erva")
+onready var madeira = get_node("recursosContainer/Madeira")
 
+var timer = Timer.new()
 var tempo = 0
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -16,6 +19,9 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 	#pass
-	
+
+
 func tick():
 	tempo += 0.1
+	erva.qnt += erva.vlct / 10
+	madeira.qnt += madeira.vlct / 10

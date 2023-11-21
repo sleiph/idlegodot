@@ -16,6 +16,8 @@ func _process(delta):
 
 
 func _pressed():
+	self.disabled = !temRecursos()
+	construcao.gastaRecursos()
 	construcao.qnt += 1
 	construcao.chngVlct()
 

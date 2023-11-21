@@ -6,8 +6,8 @@ extends GridContainer
 onready var qntLabel = get_node("qntLabelE")
 onready var vlctLabel = get_node("vlctLabelE")
 
-var qnt = 0
-var vlct = 0
+var qnt = 0.0
+var vlct = 0.0
 
 
 # Called when the node enters the scene tree for the first time.
